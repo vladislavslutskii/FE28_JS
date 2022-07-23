@@ -1,0 +1,55 @@
+.headers-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 20px;
+  background: linear-gradient(to right, #cb11ab 0, #481173 100%);
+  border-radius: 25px;
+}
+.content {
+  padding: 15px;
+  align-items: center;
+  border: 2px solid #804476;
+  background-color: #b899b3;
+  border-radius: 10px;
+
+  &-text {
+    max-width: 138px;
+    color: whitesmoke;
+    font-family: "Raleway";
+    font-weight: 900;
+    font-size: 1.1rem;
+  }
+  &-search {
+    border: 2px solid #804476;
+    border-radius: 10px;
+    width: 800px;
+    color: whitesmoke;
+    text-align: center;
+    background-color: #b899b3;
+    font-family: "Raleway";
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    &:active:hover:focus {
+      outline: none;
+      outline-offset: none;
+    }
+  }
+  &-deletes-btn {
+    color: whitesmoke;
+    width: 100px;
+    border: 2px solid #804476;
+    border-radius: 10px;
+    background-color: #b899b3;
+    font-family: "Raleway";
+    font-weight: 900;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0 10px;
+    &:active {
+      background: rgb(102, 29, 102);
+      box-shadow: 0.25em 0.25em 1.875em rgb(179, 157, 179);
+    }
+  }
+}

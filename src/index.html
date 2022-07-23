@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./img/favicon/favicon (2).ico"
+    />
+
+    <title>Wildberries</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Секция HEADER -->
+      <header class="headers">
+        <div class="container">
+          <div class="headers-content">
+            <div class="content">
+              <p class="content-text">Wildberries</p>
+            </div>
+            <input class="content-search" type="text" placeholder="Поиск..." />
+            <button class="content-deletes-btn" id="btn_modal_window">
+              Корзина
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Секция слайдер -->
+      <section class="section-slider">
+        <div class="container">
+          <div class="slider">
+            <div class="item">
+              <img
+                src="https://images.wbstatic.net/bners1/big_cyber_3006.jpg"
+                alt="Первый слайд"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="https://images.wbstatic.net/bners1/big_vent_3006.jpg"
+                alt="Второй слайд"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="https://images.wbstatic.net/bners1/big_electro_3006.jpg"
+                alt="Третий слайд"
+              />
+            </div>
+            <a class="prev" onclick="minusSlide()">&#10094;</a>
+            <a class="next" onclick="plusSlide()">&#10095;</a>
+            <div class="slider-dots">
+              <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+              <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+              <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция списка покупок -->
+      <section class="buylist">
+        <div class="container" id="cards2">
+          <div class="wrap-text">
+            <p>Хиты продаж</p>
+          </div>
+          <div class="cards" id="card1"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="my_modal" class="modal">
+      <span class="close_modal_window" id="close">×</span>
+      <div class="modal_content">
+        <div class="div-wrap">
+          <div class="wrap-header">
+            <p class="wrap-header-text">Корзина</p>
+            <button class="wrap-header-btn">Очистить корзину</button>
+          </div>
+          <div class="div"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script src="./js/components/slider.js"></script>
+    <script src="./js/components/ProductModal.js"></script>
+  </body>
+</html>

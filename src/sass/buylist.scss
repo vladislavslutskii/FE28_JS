@@ -1,0 +1,111 @@
+.wrap-text {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 10%;
+  margin-bottom: 30px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.card {
+  width: 200px;
+  height: 300px;
+  margin: 0 10px;
+  margin-bottom: 50px;
+  &-img {
+    position: relative;
+    width: 200px;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+}
+.photo {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 40px;
+}
+
+.discount {
+  position: absolute;
+  top: 87%;
+  left: 10%;
+  font-family: "Raleway";
+  font-weight: 500;
+  color: #cb11ab;
+  font-size: 1.2rem;
+  background-color: #fdeef9;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.trash-can img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.trash-can {
+  position: absolute;
+  top: 88%;
+  right: 10%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &:active {
+    box-shadow: 0.25em 0.25em 1.875em rgb(126, 23, 126);
+  }
+}
+.fast-viev {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 150px;
+  height: 25px;
+  border-radius: 10px;
+  opacity: 0;
+  background-color: #dddada;
+  transition: opacity 0.2s ease;
+  border: none;
+}
+.card-img:hover .fast-viev {
+  opacity: 1;
+}
+
+.card-info {
+  &-price {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  &-newprice {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  &-oldprice {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #aeaeae;
+  }
+  &-nameitem {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-left: 12%;
+    color: #aeaeae;
+  }
+}

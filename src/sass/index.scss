@@ -1,0 +1,257 @@
+@import "./cdn.scss";
+@import "./header.scss";
+@import "./slider.scss";
+@import "./buylist.scss";
+@import "./modal/basket.scss";
+@import "./modal/productModal.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+section {
+  padding: 20px 0;
+}
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: auto;
+}
+.html {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 658px) {
+  section {
+    padding: 10px 0;
+  }
+  .cards {
+    justify-content: space-evenly;
+  }
+  .slider .item img {
+    height: auto;
+  }
+  .slider-dots {
+    top: 83%;
+    left: 48%;
+  }
+  .slider-dots_item {
+    height: 8px;
+    width: 8px;
+  }
+  .slider .prev,
+  .slider .next {
+    width: 25px;
+    height: 25px;
+    top: 53%;
+    font-size: 18px;
+    margin-top: -20px;
+    padding: 0px;
+  }
+  .slider .prev:hover,
+  .slider .next:hover {
+    background-color: #aeaeae;
+    color: purple;
+    width: 25px;
+    height: 25px;
+    top: 53%;
+    font-size: 18px;
+    margin-top: -20px;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 550px) {
+  .content {
+    &-text {
+      font-size: 1rem;
+    }
+    &-search {
+      font-size: 1rem;
+    }
+    &-deletes-btn {
+      font-size: 1rem;
+    }
+  }
+  .headers-content {
+    padding: 20px 14px;
+  }
+}
+@media (max-width: 500px) {
+  .content {
+    &-text {
+      font-size: 0.95rem;
+    }
+    &-search {
+      font-size: 0.95rem;
+    }
+    &-deletes-btn {
+      font-size: 0.95rem;
+    }
+  }
+  .headers-content {
+    padding: 20px 13px;
+  }
+}
+@media (max-width: 500px) {
+  .content {
+    &-search {
+      padding: 15px;
+      font-size: 1rem;
+      margin: 0 5px 0 0;
+    }
+    &-deletes-btn {
+      padding: 15px;
+      font-size: 1rem;
+    }
+  }
+  .headers-content {
+    padding: 20px 12px;
+  }
+  .content {
+    display: none;
+  }
+}
+@media (max-width: 455px) {
+  .content {
+    &-search {
+      font-size: 0.95rem;
+    }
+    &-deletes-btn {
+      font-size: 0.95rem;
+    }
+  }
+  .headers-content {
+    padding: 20px 11px;
+  }
+  .div-wrap {
+    padding: 15px;
+    width: 350px;
+  }
+  .modal .modal_content {
+    width: 350px;
+  }
+  .wraps {
+    justify-content: center;
+  }
+  .wrap1 {
+    margin: 30px auto 0px auto;
+  }
+  .wrap-text {
+    justify-content: center;
+    margin-left: 0;
+    font-size: 1.2rem;
+  }
+  .discount {
+    font-size: 1rem;
+    top: 85%;
+  }
+  .trash-can img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 18px;
+    height: 18px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .trash-can {
+    position: absolute;
+    top: 86%;
+    right: 10%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:active {
+      box-shadow: 0.25em 0.25em 1.875em rgb(126, 23, 126);
+    }
+  }
+  .card {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 150px;
+    &-img {
+      position: relative;
+      width: 150px;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  }
+  .photo {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 40px;
+  }
+  .fast-viev {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    opacity: 0;
+    background-color: #dddada;
+    transition: opacity 0.2s ease;
+    border: none;
+  }
+  .card-img:hover .fast-viev {
+    opacity: 1;
+  }
+  .card-info {
+    &-nameitem {
+      display: flex;
+      justify-content: center;
+      margin-left: 0;
+      font-size: 1.1rem;
+    }
+    &-newprice {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    &-oldprice {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+}
+@media (max-width: 439px) {
+}
+
+@media (max-width: 425px) {
+  .content {
+    &-search {
+      font-size: 0.9rem;
+    }
+    &-deletes-btn {
+      font-size: 0.9rem;
+    }
+  }
+  .headers-content {
+    padding: 20px 10px;
+  }
+  .div-wrap {
+    padding: 15px;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+}
