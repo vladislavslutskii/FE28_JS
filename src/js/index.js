@@ -97,7 +97,7 @@ function showTrash() {
   }
   out1 += `</div>
 	<div class="wrap-total">
-	<p class="curent-total" id="curr">Итого: </p>
+	<p class="curent-total" id="curr">$</p>
 	</div>
 	</div>`;
   document.getElementById(`my_modal`).innerHTML = out1;
@@ -113,8 +113,9 @@ function showTrash() {
         parseFloat(count.innerText) * parseFloat(price.innerText);
       totalPrice += curentPrice;
     });
-    totalPrice = totalPrice.toFixed(2);
-    document.getElementById(`curr`).textContent = `Итого:` + ` ` + totalPrice;
+    // totalPrice = totalPrice.toFixed(2);
+    document.getElementById(`curr`).textContent =
+      `Итого:` + ` ` + totalPrice + ` ` + `$`;
   };
   calcCartPrice();
   // _______________________
@@ -124,7 +125,8 @@ function showTrash() {
     localStorage.removeItem(`cartContent`);
     let description = document.getElementById(`delete`);
     description.remove();
-    document.getElementById(`curr`).textContent = `Итого:` + ` ` + `0`;
+    document.getElementById(`curr`).textContent =
+      `Итого:` + ` ` + `0.00` + ` ` + `$`;
   });
   // _______________________
 }
