@@ -113,7 +113,8 @@ function showTrash() {
         parseFloat(count.innerText) * parseFloat(price.innerText);
       totalPrice += curentPrice;
     });
-    // totalPrice = totalPrice.toFixed(2);
+    totalPrice = totalPrice.toFixed(2);
+    console.log(totalPrice);
     document.getElementById(`curr`).textContent =
       `Итого:` + ` ` + totalPrice + ` ` + `$`;
   };
