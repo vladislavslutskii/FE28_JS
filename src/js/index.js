@@ -73,6 +73,7 @@ window.addEventListener(`click`, (event) => {
       trashData[articul][`count`] = 1;
       showTrash();
     }
+    console.log(trashData);
     localStorage.setItem(`cartContent`, JSON.stringify(trashData));
   }
 });
@@ -114,7 +115,6 @@ function showTrash() {
       totalPrice += curentPrice;
     });
     totalPrice = totalPrice.toFixed(2);
-    console.log(totalPrice);
     document.getElementById(`curr`).textContent =
       `Итого:` + ` ` + totalPrice + ` ` + `$`;
   };
@@ -123,11 +123,14 @@ function showTrash() {
 
   // Удаление всех товаров из корзины
   document.getElementById(`deleteBtn`).addEventListener(`click`, () => {
-    localStorage.removeItem(`cartContent`);
+    for (const prop of Object.getOwnPropertyNames(trashData)) {
+      delete trashData[prop];
+    }
     let description = document.getElementById(`delete`);
     description.remove();
     document.getElementById(`curr`).textContent =
       `Итого:` + ` ` + `0.00` + ` ` + `$`;
+    localStorage.removeItem(`cartContent`);
   });
   // _______________________
 }
@@ -135,7 +138,6 @@ function showTrash() {
 // Добавление модального окна к карточке товара
 const myModal = new HystModal({
   linkAttributeName: "data-hystmodal",
-  // настройки (не обязательно), см. API
 });
 
 // Находим тег html и сохраняем его
